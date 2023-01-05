@@ -21,9 +21,9 @@ import { Button, Header, Input, OverlayBlock, PageLoading, Title } from "public/
 
 //util
 import { LEFT_COLOR, RIGHT_COLOR, FAIL_RIGHT_COLOR } from "public/util/colors";
-// import { successIcon, failIcon } from "public/util/popup";
-successIcon = require("../../public/img/successIcon.png");
-failIcon = require("../../public/img/failIcon.png");
+import { successIcon, failIcon } from "public/util/popup";
+// successIcon = require("../../public/img/successIcon.png");
+// failIcon = require("../../public/img/failIcon.png");
 import { isEmpty, hasWhiteSpaceAndValidLength } from "public/util/functions";
 import { messagesError, messagesSuccess } from "public/util/messages"
 
@@ -100,7 +100,7 @@ export default function ChangePassword() {
 
   // show popup
   useEffect(() => {
-    if (!isHidden == false) {
+    if (isHidden == false) {
       isSuccess ? document.getElementById("imgPopupCP").src = successIcon : document.getElementById("imgPopupCP").src = failIcon;
       document.getElementById("textState").innerHTML = textState;
       document.getElementById("changeOverlay").classList.toggle('hidden');
