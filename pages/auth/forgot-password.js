@@ -144,7 +144,7 @@ export default function ForgotPassword() {
   // show popup
   useEffect(() => {
     if (isHidden == false) {
-      isSuccess ? document.getElementById("imgPopup").src = successIcon : document.getElementById("imgPopup").src = failIcon;
+      isSuccess ? document.getElementById("imgPopupFW").src = successIcon : document.getElementById("imgPopupFW").src = failIcon;
       document.getElementById("textState").innerHTML = textState;
       document.getElementById("forgotOverlay").classList.toggle('hidden');
       const timer = setTimeout(() => {
