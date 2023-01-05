@@ -458,7 +458,7 @@ export default function LuckySpinAdmin() {
                                         onChange={() => {
                                             if (document.getElementById("spinTime").value && document.getElementById("spinTime").value >= 2)
                                                 setSpinTime(parseInt(document.getElementById("spinTime").value));
-                                            else if (document.getElementById("spinTime").value && document.getElementById("spinTime").value <= 60) {
+                                            else if (document.getElementById("spinTime").value && document.getElementById("spinTime").value >= 60) {
                                                 setSpinTime(60);
                                                 document.getElementById("spinTime").value = 60;
                                             }
